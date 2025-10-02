@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PayrollEmailWorker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df1eb463a0218625b52014457fce1095587d8968")]
 [assembly: System.Reflection.AssemblyProductAttribute("PayrollEmailWorker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PayrollEmailWorker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,19 +1,24 @@
 ﻿using Dapper;
+using DinkToPdf;
+using DinkToPdf.Contracts;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using Microsoft.Data.SqlClient;
 using PayrollEmailWorker.Models;
+using System.Text;
 
 public class PayslipWorker : BackgroundService
 {
     private readonly ILogger<PayslipWorker> _logger;
     private readonly string _connectionString;
+    private readonly IConverter _converter;
 
-    public PayslipWorker(ILogger<PayslipWorker> logger, IConfiguration configuration)
+    public PayslipWorker(ILogger<PayslipWorker> logger, IConfiguration configuration, IConverter converter)
     {
         _logger = logger;
         _connectionString = configuration.GetConnectionString("DefaultConnection");
+        _converter = converter;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -72,54 +77,56 @@ public class PayslipWorker : BackgroundService
 
         string filePath = Path.Combine(folderPath, $"Payslip_{emp.EmpCode}_{DateTime.Now:yyyyMMdd}.pdf");
 
-        using var writer = new PdfWriter(filePath);
-        using var pdf = new PdfDocument(writer);
-        using var document = new Document(pdf);
+        // Load HTML template
+        string templatePath = Path.Combine(AppContext.BaseDirectory, "HTML", "payslip-template.html");
+        string html = File.ReadAllText(templatePath);
 
-        // Company & Header
-        document.Add(new Paragraph("Access2Resources Pvt. Ltd.").SetFontSize(16));
-        document.Add(new Paragraph($"Payslip for {DateTime.Now:MMMM yyyy}")
-            .SetFontSize(12)
-            .SetMarginBottom(20));
-
-        // Employee Details
-        document.Add(new Paragraph($"Employee Name: {emp.EmpName}"));
-        document.Add(new Paragraph($"Department: {emp.Department}"));
-        document.Add(new Paragraph($"Designation: {emp.Designation}"));
-        document.Add(new Paragraph($"Employee Code: {emp.EmpCode}"));
-        document.Add(new Paragraph($"Grade: {emp.Grade}"));
-        document.Add(new Paragraph($"Join Date: {(emp.JoinDate.HasValue ? emp.JoinDate.Value.ToString("dd-MMM-yyyy") : "-")}"));
-        document.Add(new Paragraph("-------------------------------------------------"));
-
-        // Salary Table (Dynamic Heads)
-        Table table = new Table(2);
+        // Build salary rows dynamically
+        var salaryRows = new StringBuilder();
         foreach (var head in empHeads)
         {
-            table.AddCell(head.HeadName);
-            table.AddCell(head.Amount.ToString("C"));
+            salaryRows.AppendLine($"<tr><td>{head.HeadName}</td><td>{head.Amount:C}</td></tr>");
         }
 
-        table.AddCell("Gross Rate");
-        table.AddCell(emp.GrossRate.ToString("C"));
+        // Replace placeholders
+        html = html.Replace("{{Month}}", DateTime.Now.ToString("MMMM yyyy"))
+                   .Replace("{{EmpName}}", emp.EmpName)
+                   .Replace("{{Department}}", emp.Department ?? "-")
+                   .Replace("{{Designation}}", emp.Designation ?? "-")
+                   .Replace("{{EmpCode}}", emp.EmpCode)
+                   .Replace("{{Grade}}", emp.Grade ?? "-")
+                   .Replace("{{JoinDate}}", emp.JoinDate.HasValue ? emp.JoinDate.Value.ToString("dd-MMM-yyyy") : "-")
+                   .Replace("{{SalaryRows}}", salaryRows.ToString())
+                   .Replace("{{GrossRate}}", emp.GrossRate.ToString("C"))
+                   .Replace("{{DeductionAmount}}", emp.DeductionAmount.ToString("C"))
+                   .Replace("{{NetPay}}", emp.NetPay.ToString("C"))
+                   .Replace("{{OpeningPL}}", emp.OpeningPL.ToString())
+                   .Replace("{{PLEarn}}", emp.PLEarn.ToString())
+                   .Replace("{{PLAvail}}", emp.PLAvail.ToString())
+                   .Replace("{{PLClosing}}", emp.PLClosing.ToString());
 
-        table.AddCell("Deduction Amount");
-        table.AddCell(emp.DeductionAmount.ToString("C"));
+        // Generate PDF with DinkToPdf
+        var doc = new HtmlToPdfDocument()
+        {
+            GlobalSettings = new GlobalSettings
+            {
+                ColorMode = ColorMode.Color,
+                Orientation = Orientation.Portrait,
+                PaperSize = PaperKind.A4,
+                Out = filePath
+            },
+            Objects = {
+            new ObjectSettings
+            {
+                HtmlContent = html,
+                WebSettings = { DefaultEncoding = "utf-8" }
+            }
+        }
+        };
 
-        table.AddCell("Net Pay");
-        table.AddCell(emp.NetPay.ToString("C"));
-
-        document.Add(table);
-
-        // PL Details
-        document.Add(new Paragraph($"\nPL Opening: {emp.OpeningPL}"));
-        document.Add(new Paragraph($"PL Earned: {emp.PLEarn}"));
-        document.Add(new Paragraph($"PL Avail: {emp.PLAvail}"));
-        document.Add(new Paragraph($"PL Closing: {emp.PLClosing}"));
-
-        // Disclaimer
-        document.Add(new Paragraph("\nThis is a computer-generated payslip and does not require signature.")
-            .SetFontSize(9));
+        _converter.Convert(doc);
 
         _logger.LogInformation("Payslip generated: {filePath}", filePath);
     }
+
 }
