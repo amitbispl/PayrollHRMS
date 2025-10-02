@@ -312,3 +312,4 @@ D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\obj\Debug\net9.0\PayrollEmai
 D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\obj\Debug\net9.0\ref\PayrollEmailWorker.dll
 D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\bin\Debug\net9.0\HTML\payslip-template.html
 D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\bin\Debug\net9.0\wkhtmltox\libwkhtmltox.dll
+D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\bin\Debug\net9.0\HTML\payslip-template1.html

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary / Leave Slip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        .slip-container {
+            max-width: 800px;
+            margin: auto;
+            border: 2px solid #808080;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #808080;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+            .header img.logo {
+                height: 50px;
+                vertical-align: middle;
+            }
+
+            .header .company-info {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+            .section table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .section th, .section td {
+                border: 1px solid #808080;
+                padding: 6px 8px;
+                text-align: left;
+            }
+
+            .section th {
+                background-color: #f0f0f0;
+            }
+
+        .gray-bg {
+            background-color: #BFBFBF;
+        }
+
+        .right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="slip-container">
+        <div class="header">
+            <img src="data:image/png;base64,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" class="logo" alt="Company Logo" />
+            <div class="company-info">
+                <strong>Tilakheda, Girwa Udaipur - 313003</strong><br />
+                 <em>Salary / Leave Slip for the month of: {{SalaryPeriod}}</em>
+            </div>
+        </div>
+
+        <div class="section">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>{{EmpName}}</td>
+                    <th>Emp. Code</th>
+                    <td>{{EmpCode}}</td>
+                </tr>
+                <tr>
+                    <th>Department</th>
+                    <td>{{Department}}</td>
+                    <th>Aadhar</th>
+                    <td class="gray-bg">{{Aadhar}}</td>
+                </tr>
+                <tr>
+                    <th>Designation</th>
+                    <td>{{Designation}}</td>
+                    <th>Grade / Join Date</th>
+                    <td>{{Grade}} / {{JoinDate}}</td>
+                </tr>
+                <tr>
+                    <th>Bank Name</th>
+                    <td>{{BankName}}</td>
+                    <th>Bank A/C No / IFSC</th>
+                    <td>{{BankAccount}} / {{IFSCCode}}</td>
+                </tr>
+                <tr>
+                    <th>PF No.</th>
+                    <td>{{PFNo}}</td>
+                    <th>ESIC / UAN</th>
+                    <td>{{ESIC}} / {{UAN}}</td>
+                </tr>
+                <tr>
+                    <th>Total Month Days</th>
+                    <td>{{TotalMonthDays}}</td>
+                    <th>Total Paid Days</th>
+                    <td>{{TotalPaidDays}}</td>
+                </tr>
+                <tr>
+                    <th>Opening PL</th>
+                    <td>{{OpeningPL}}</td>
+                    <th>Leave Taken</th>
+                    <td>{{LeaveTaken}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <table>
+                <tr>
+                    <th>Earnings</th>
+                    <th>Amount</th>
+                    <th>Deductions</th>
+                    <th>Amount</th>
+                </tr>
+                {{SalaryRows}}
+                <tr>
+                    <th>Total Earnings</th>
+                    <td>{{TotalEarnings}}</td>
+                    <th>Total Deductions</th>
+                    <td>{{TotalDeductions}}</td>
+                </tr>
+                <tr>
+                    <th colspan="3" class="right">Net Salary</th>
+                    <td>{{NetSalary}}</td>
+                </tr>
+                <tr>
+                    <th colspan="3" class="right">Amount in words</th>
+                    <td>{{NetPayInWords}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
