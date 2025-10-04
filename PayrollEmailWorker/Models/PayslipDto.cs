@@ -20,6 +20,7 @@ namespace PayrollEmailWorker.Models
         public string PFNo { get; set; }
         public string ESIC { get; set; }
         public string UAN { get; set; }
+        public string AADHAR { get; set; }
         public decimal TotalMonthDays { get; set; }
         public decimal TotalPaidDays { get; set; }
         public decimal OpeningPL { get; set; }
@@ -33,12 +34,14 @@ namespace PayrollEmailWorker.Models
 
         // Dynamic salary heads
         public string HeadName { get; set; }
+        public string HeadType { get; set; }
         public decimal Amount { get; set; }
         public decimal EarningsAmount { get; set; }
         public decimal DeductionsAmount { get; set; }
         public bool IsFirstRow { get; set; } = false; // Only first row renders deductions block
         public int DeductionRowSpan { get; set; } = 1; // rowspan for deductions column
         public string DeductionsTitle { get; set; } = "E.P.F. ESIC\nHostel TDS\nOther Deductions";
+        public decimal? OtherDeductionTotal { get; set; }
     }
 
 

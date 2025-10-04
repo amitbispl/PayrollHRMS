@@ -5,29 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salary / Leave Slip</title>
     <style>
+        @page {
+            size: A4 portrait;
+            margin: 15mm;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .slip-container {
-            max-width: 800px;
-            margin: auto;
+            width: 100%;
+            max-width: 210mm;
+            min-height: 297mm;
+            padding: 15px;
             border: 2px solid #808080;
-            padding: 20px;
             border-radius: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
         }
 
         .header {
             text-align: center;
             border-bottom: 2px solid #808080;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
             .header img.logo {
-                height: 50px;
+                height: 60px;
                 vertical-align: middle;
             }
 
@@ -39,17 +48,18 @@
             }
 
         .section {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
             .section table {
                 width: 100%;
                 border-collapse: collapse;
+                font-size: 12px;
             }
 
             .section th, .section td {
                 border: 1px solid #808080;
-                padding: 6px 8px;
+                padding: 4px 6px;
                 text-align: left;
             }
 
@@ -64,24 +74,41 @@
         .right {
             text-align: right;
         }
+
+        .signature-box {
+            width: 200px;
+            height: 60px;
+            border: 1px solid #000;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="slip-container">
-        <div class="header">
+        <!-- Header -->
+        <div class="header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #808080; padding-bottom: 10px; margin-bottom: 20px;">
+            <!-- Logo on the left -->
+            <div class="logo-container">
+                <img src="D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\HTML\images\logo.png"
+                     alt="Company Logo"
+                     class="logo"
+                     style="height: 60px;" />
+            </div>
 
-            <img src="D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\HTML\images\logo.png"  alt="Company Logo" style="height:60px;" />
-            <div class="company-info">
-                <strong>Tilakheda, Girwa Udaipur - 313003</strong><br />
-                <em>Salary / Leave Slip for the month of: {{SalaryPeriod}}</em>
+            <!-- Company info on the right -->
+            <div class="company-info" style="display: flex; flex-direction: column; text-align: right; font-size: 14px; line-height: 1.2;">
+                <strong>Tilakheda, Girwa Udaipur - 313003</strong>
+                <span>Salary / Leave Slip for the month of: {{SalaryPeriod}}</span>
             </div>
         </div>
 
+
+        <!-- Employee Details -->
         <div class="section">
             <table>
                 <tr>
                     <th>Name</th>
-                    <td>{{EmpName}}</td>
+                    <td style="color: red;">{{EmpName}}</td>
                     <th>Emp. Code</th>
                     <td>{{EmpCode}}</td>
                 </tr>
@@ -104,10 +131,10 @@
                     <td>{{BankAccount}} / {{IFSCCode}}</td>
                 </tr>
                 <tr>
-                    <th>PF No.</th>
-                    <td>{{PFNo}}</td>
-                    <th>ESIC / UAN</th>
-                    <td>{{ESIC}} / {{UAN}}</td>
+                    <th>UAN</th>
+                    <td>{{UAN}}</td>
+                    <th>ESIC</th>
+                    <td>{{ESIC}}</td>
                 </tr>
                 <tr>
                     <th>Total Month Days</th>
@@ -118,34 +145,66 @@
                 <tr>
                     <th>Opening PL</th>
                     <td>{{OpeningPL}}</td>
-                    <th>Leave Taken</th>
-                    <td>{{LeaveTaken}}</td>
+                    <th>PL Earn</th>
+                    <td>{{PLEarn}}</td>
+                </tr>
+                <tr>
+                    <th>PL Avail</th>
+                    <td>{{PLAvail}}</td>
+                    <th>PL Closing</th>
+                    <td>{{PLClosing}}</td>
                 </tr>
             </table>
         </div>
 
+        <!-- Salary Details -->
         <div class="section">
             <table>
                 <tr>
-                    <th>Earnings</th>
-                    <th>Amount</th>
-                    <th>Deductions</th>
-                    <th>Amount</th>
+                    <th>Wages Head</th>
+                    <th>Gross Rate</th>
+                    <th>Earning Amount</th>
+                    <th>DEDUCTIONS</th>
+                    <th>DEDUCTIONS Amount</th>
                 </tr>
                 {{SalaryRows}}
+            </table>
+        </div>
+
+        <!-- Signature Details -->
+        <div class="section">
+            <table>
                 <tr>
-                    <th>Total Earnings</th>
-                    <td>{{TotalEarnings}}</td>
-                    <th>Total Deductions</th>
-                    <td>{{TotalDeductions}}</td>
+                    <td colspan="4" style="text-align:center; padding-top:15px; font-style:italic; color:#555;">
+                        This is a computer-generated statement, hence does not require any signature.
+                    </td>
                 </tr>
                 <tr>
-                    <th colspan="3" class="right">Net Salary</th>
-                    <td>{{NetSalary}}</td>
+                    <th>Email</th>
+                    <td>{{Email}}</td>
                 </tr>
                 <tr>
-                    <th colspan="3" class="right">Amount in words</th>
-                    <td>{{NetPayInWords}}</td>
+                    <th>Prepared By</th>
+                    <td><div class="signature-box"></div></td>
+                    <th>Checked By</th>
+                    <td><div class="signature-box"></div></td>
+                </tr>
+                <tr>
+                    <th>Signature of Employee</th>
+                    <td colspan="3">
+                        {{EmpName}}
+                        <div class="signature-box"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Name & Address of Employer</th>
+                    <td colspan="3"><b>Vardha Enterprises Pvt. LTD., Tilakheda, Girwa Udaipur - 313003</b></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>{{Date}}</td>
+                    <th>Place</th>
+                    <td>{{Place}}</td>
                 </tr>
             </table>
         </div>
