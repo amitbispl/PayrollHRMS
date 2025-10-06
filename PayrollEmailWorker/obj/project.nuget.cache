@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d1133nEecgY=",
+  "dgSpecHash": "DI4WHTz1GBY=",
   "success": true,
   "projectFilePath": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\PayrollEmailWorker.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\ftvr4\\.nuget\\packages\\itext.commons\\9.3.0\\itext.commons.9.3.0.nupkg.sha512",
     "C:\\Users\\ftvr4\\.nuget\\packages\\itext7\\9.3.0\\itext7.9.3.0.nupkg.sha512",
     "C:\\Users\\ftvr4\\.nuget\\packages\\itext7.bouncy-castle-adapter\\9.3.0\\itext7.bouncy-castle-adapter.9.3.0.nupkg.sha512",
+    "C:\\Users\\ftvr4\\.nuget\\packages\\itextsharp\\5.5.13.4\\itextsharp.5.5.13.4.nupkg.sha512",
     "C:\\Users\\ftvr4\\.nuget\\packages\\mailkit\\4.13.0\\mailkit.4.13.0.nupkg.sha512",
     "C:\\Users\\ftvr4\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\ftvr4\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.4\\microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
@@ -163,5 +164,18 @@
     "C:\\Users\\ftvr4\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\ftvr4\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'iTextSharp 5.5.13.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "projectPath": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\PayrollEmailWorker.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\PayrollEmailWorker.csproj",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

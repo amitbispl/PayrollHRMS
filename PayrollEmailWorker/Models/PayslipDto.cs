@@ -42,6 +42,10 @@ namespace PayrollEmailWorker.Models
         public int DeductionRowSpan { get; set; } = 1; // rowspan for deductions column
         public string DeductionsTitle { get; set; } = "E.P.F. ESIC\nHostel TDS\nOther Deductions";
         public decimal? OtherDeductionTotal { get; set; }
+        public decimal BASIC { get; set; }
+        public decimal HRA { get; set; }
+        public decimal FlexiPay { get; set; }
+
     }
 
 

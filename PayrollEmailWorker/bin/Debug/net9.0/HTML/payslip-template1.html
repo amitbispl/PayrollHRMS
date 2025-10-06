@@ -18,9 +18,11 @@
         }
 
         .slip-container {
-            width: 100%;
+            width: 85%; /* narrower than full page */
             max-width: 210mm;
             min-height: 297mm;
+            margin-left: auto; /* equal left margin */
+            margin-right: auto; /* equal right margin */
             padding: 15px;
             border: 2px solid #808080;
             border-radius: 5px;
@@ -81,6 +83,86 @@
             border: 1px solid #000;
             margin-top: 5px;
         }
+        /* Salary details table column alignment */
+        .section.salary-details th:nth-child(1),
+        .section.salary-details td:nth-child(1) {
+            text-align: left; /* Wages Head */
+        }
+
+        .section.salary-details th:nth-child(5),
+        .section.salary-details td:nth-child(5) {
+            text-align: right; /* Deductions Amount */
+        }
+
+        .section.salary-details th:nth-child(2),
+        .section.salary-details th:nth-child(3),
+        .section.salary-details th:nth-child(4),
+        .section.salary-details td:nth-child(2),
+        .section.salary-details td:nth-child(3),
+        .section.salary-details td:nth-child(4) {
+            text-align: center; /* Middle columns */
+        }
+        /* Remove horizontal lines for all td */
+        .section.salary-details td {
+            border-top: none;
+            border-bottom: none;
+        }
+        /* Total row - show horizontal lines */
+        .section.salary-details tr.total-row td {
+            border-top: 1px solid #808080; /* top border */
+            border-bottom: 1px solid #808080; /* bottom border */
+            font-weight: bold; /* optional: highlight */
+        }
+
+            /* Column alignment for total row (optional) */
+            .section.salary-details tr.total-row td:nth-child(1) {
+                text-align: left;
+            }
+            /* Total label */
+            .section.salary-details tr.total-row td:nth-child(2),
+            .section.salary-details tr.total-row td:nth-child(3),
+            .section.salary-details tr.total-row td:nth-child(4) {
+                text-align: center;
+            }
+
+            .section.salary-details tr.total-row td:nth-child(5) {
+                text-align: right;
+            }
+            /* Text alignment */
+            .section.salary-details td:nth-child(1) {
+                text-align: left;
+            }
+
+            .section.salary-details td:nth-child(2),
+            .section.salary-details td:nth-child(3),
+            .section.salary-details td:nth-child(4) {
+                text-align: center;
+            }
+
+            .section.salary-details td:nth-child(5) {
+                text-align: right;
+            }
+
+        /* Add horizontal line for total row only */
+        .section.salary-details tr.total-row td {
+            border-top: 1px solid #808080;
+            border-bottom: 1px solid #808080;
+            font-weight: bold; /* optional: highlight total row */
+        }
+        /* Align Net Amount row */
+        .salary-details tr.net-pay-row th {
+            text-align: right; /* Label right aligned */
+            border-top: 1px solid #808080; /* optional top border */
+            border-bottom: 1px solid #808080; /* optional bottom border */
+        }
+
+        .salary-details tr.net-pay-row td {
+            text-align: left; /* Value left aligned */
+            border-top: 1px solid #808080; /* optional top border */
+            border-bottom: 1px solid #808080; /* optional bottom border */
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
@@ -108,7 +190,7 @@
             <table>
                 <tr>
                     <th>Name</th>
-                    <td style="color: red;">{{EmpName}}</td>
+                    <td style="color:orange ;"><b>{{EmpName}}</b></td>
                     <th>Emp. Code</th>
                     <td>{{EmpCode}}</td>
                 </tr>
@@ -158,18 +240,26 @@
         </div>
 
         <!-- Salary Details -->
-        <div class="section">
+        <div class="section salary-details">
             <table>
+                <colgroup>
+                    <col style="width: 35%;" /> <!-- Wages Head -->
+                    <col style="width: 15%;" /> <!-- Gross Rate -->
+                    <col style="width: 15%;" /> <!-- Earning Amount -->
+                    <col style="width: 20%;" /> <!-- Deductions -->
+                    <col style="width: 15%;" /> <!-- Deductions Amount -->
+                </colgroup>
                 <tr>
                     <th>Wages Head</th>
                     <th>Gross Rate</th>
                     <th>Earning Amount</th>
-                    <th>DEDUCTIONS</th>
-                    <th>DEDUCTIONS Amount</th>
+                    <th>Deductions</th>
+                    <th>Deductions Amount</th>
                 </tr>
                 {{SalaryRows}}
             </table>
         </div>
+
 
         <!-- Signature Details -->
         <div class="section">
@@ -185,7 +275,15 @@
                 </tr>
                 <tr>
                     <th>Prepared By</th>
-                    <td><div class="signature-box"></div></td>
+                    <td>
+                        <div class="signature-box">
+
+                            <img src="D:\Amit\Repositories\PayrollHRMS\PayrollEmailWorker\HTML\images\a2rlogo.jpg"
+                                 alt="Company Logo"
+                                 class="logo"
+                                 style="height: 60px;" />
+                        </div>
+                    </td>
                     <th>Checked By</th>
                     <td><div class="signature-box"></div></td>
                 </tr>

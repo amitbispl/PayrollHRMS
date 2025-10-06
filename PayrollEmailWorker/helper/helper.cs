@@ -35,12 +35,12 @@ namespace PayrollEmailWorker.helper
         public static string NumberToWords(decimal number)
         {
             long intPart = (long)Math.Floor(number);
-            int fractionPart = (int)((number - intPart) * 100);
+            int fractionPart = (int)Math.Round((number - intPart) * 100);
 
-            string words = NumberToWords(intPart);
+            string words = NumberToWords(intPart); // your existing integer-to-words method
 
             if (fractionPart > 0)
-                words += $" and {fractionPart}/100";
+                words += $" and {NumberToWords(fractionPart)} paise"; // convert fractional part to words
 
             return words + " only";
         }

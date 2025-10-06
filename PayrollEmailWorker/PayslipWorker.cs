@@ -28,6 +28,7 @@ public class PayslipWorker : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        //await SendPayslipsManuallyAsync(); 
         while (!stoppingToken.IsCancellationRequested)
         {
             _logger.LogInformation("Payslip generation started at: {time}", DateTimeOffset.Now);
@@ -49,6 +50,7 @@ public class PayslipWorker : BackgroundService
             }
 
             var employeeGroups = employees.GroupBy(e => e.EmpCode).ToList();
+
 
             string folderPath = Path.Combine("Payslips", DateTime.Now.ToString("yyyy-MM"));
             Directory.CreateDirectory(folderPath);
@@ -91,7 +93,7 @@ public class PayslipWorker : BackgroundService
                     _logger.LogInformation("Payslip generated: {filePath}", filePath);
 
                     // Send individual email to employee
-                    await SendEmailWithAttachmentAsync(emp, filePath);
+                    //await SendEmailWithAttachmentAsync(emp, filePath);
                 }
                 catch (Exception ex)
                 {
@@ -106,7 +108,7 @@ public class PayslipWorker : BackgroundService
 
                 _logger.LogInformation("Merged PDF created: {mergedFile}", mergedFile);
 
-                await SendMergedEmailToHRAsync(mergedFile);
+                //await SendMergedEmailToHRAsync(mergedFile);
             }
 
             _logger.LogInformation("Payslip generation completed at: {time}", DateTimeOffset.Now);
@@ -118,72 +120,88 @@ public class PayslipWorker : BackgroundService
     private string BuildPayslipHtml(IEnumerable<PayslipDto> empHeads, string htmlTemplate)
     {
         var emp = empHeads.First();
+        var previousMonth = DateTime.Now.AddMonths(-1);
 
         // Separate earnings & deductions
         var earnings = empHeads.Where(x => x.HeadType == "Earning")
-                               .Select(x => (x.HeadName, x.Amount))
+                               .Select(x => new { x.HeadName, x.Amount })
                                .ToList();
 
         var deductions = empHeads.Where(x => x.HeadType == "Deduction")
-                                 .Select(x => (x.HeadName, x.Amount))
+                                 .Select(x => new { x.HeadName, x.Amount })
                                  .ToList();
 
-        // Total Gross = sum of BASIC + HRA + Flexi Pay
-        decimal grossRate = earnings
-            .Where(x => x.HeadName == "BASIC" || x.HeadName == "HRA" || x.HeadName == "Flexipay")
-            .Sum(x => x.Amount);
-        // ✅ get "OtherDeductionTotal" only once (from "Other Deduction" row)
+        // Individual Gross components
+        decimal basic = emp.BASIC;     // directly from PayslipDto
+        decimal hra = emp.HRA;         // directly from PayslipDto
+        decimal flexiPay = emp.FlexiPay; // directly from PayslipDto
+
+        // Total Gross (optional)
+        decimal grossRate = basic + hra + flexiPay;
+
+        // Other Deduction Total
         decimal otherDeductionTotal = empHeads.FirstOrDefault(x => x.OtherDeductionTotal.HasValue)?.OtherDeductionTotal ?? 0;
 
         decimal totalEarning = earnings.Sum(x => x.Amount);
         decimal totalDeduction = deductions.Sum(x => x.Amount);
         decimal netPay = totalEarning - totalDeduction;
 
-        string netPayInWords = Helper.NumberToWords(grossRate);
-        string salaryPeriod = Helper.GetSalaryPeriod(DateTime.Now);
+        string netPayInWords = Helper.NumberToWords(netPay);
+        string salaryPeriod = Helper.GetSalaryPeriod(previousMonth);
 
         var salaryRows = new StringBuilder();
         int maxRows = Math.Max(earnings.Count, deductions.Count);
 
         for (int i = 0; i < maxRows; i++)
         {
-            var earn = i < earnings.Count ? earnings[i] : ("", 0m);
-            var ded = i < deductions.Count ? deductions[i] : ("", 0m);
+            var earn = i < earnings.Count ? earnings[i] : new { HeadName = "", Amount = 0m };
+            var ded = i < deductions.Count ? deductions[i] : new { HeadName = "", Amount = 0m };
+
+            string grossVal = earn.HeadName switch
+            {
+                "BASIC" => basic.ToString("C"),
+                "HRA" => hra.ToString("C"),
+                "Flexipay" => flexiPay.ToString("C"),
+                _ => ""
+            };
 
             salaryRows.AppendLine($@"
 <tr>
-    <td>{earn.Item1}</td>
-    <td>{(earn.Item2 > 0 ? earn.Item2.ToString("C") : "")}</td>
-    <td>{(earn.Item2 > 0 ? earn.Item2.ToString("C") : "")}</td>
-    <td>{ded.Item1}</td>
-    <td>{(ded.Item2 > 0 ? ded.Item2.ToString("C") : "")}</td>
+    <td>{earn.HeadName}</td>
+    <td>{grossVal}</td>
+    <td>{(earn.Amount > 0 ? earn.Amount.ToString("C") : "")}</td>
+    <td>{ded.HeadName}</td>
+    <td style='text-align:right'>{(ded.Amount > 0 ? ded.Amount.ToString("C") : "")}</td>
 </tr>");
         }
 
-        // ✅ Show Other Deduction Total row separately
+        // Other Deduction Total row
         if (otherDeductionTotal > 0)
         {
             salaryRows.AppendLine($@"
 <tr>
-    <th colspan='4' class='right'>Other Deductions Total</th>
+    <th colspan='5' class='right'>Other Deductions Total</th>
     <td>{otherDeductionTotal:C}</td>
 </tr>");
         }
 
         // Totals
         salaryRows.AppendLine($@"
-<tr>
-    <th>Total Earnings (Including BASIC + HRA + Flexi Pay)</th>
-    <td>Gross: {grossRate:C}</td>
-    <td>Total: {totalEarning:C}</td>
+<tr class=""total-row"">
+    <th>Total Earnings</th>
+    <td>{grossRate:C}</td>
+    <td>{totalEarning:C}</td>
     <th>Total Deductions</th>
     <td>{totalDeduction:C}</td>
 </tr>
+<tr class=""net-pay-row"">
+    <td colspan=""5"">Net Amount Payable Rs. {netPay:C} /=</td>
+</tr>
 <tr>
-    <th colspan='4' class='right'>Net Amount Payable</th>
-    <td>Rs. {netPayInWords} through Bank for  the month {DateTime.Now:MMMM yyyy}.</td>
+    <td colspan=""5"">(Rs. {netPayInWords} through Bank for the month {DateTime.Now:MMMM yyyy}.)</td>
 </tr>");
 
+        // Replace placeholders in HTML template
         return htmlTemplate
             .Replace("{{Month}}", DateTime.Now.ToString("MMMM yyyy"))
             .Replace("{{EmpName}}", emp.EmpName)
@@ -201,13 +219,13 @@ public class PayslipWorker : BackgroundService
             .Replace("{{TotalEarnings}}", totalEarning.ToString("C"))
             .Replace("{{TotalDeductions}}", totalDeduction.ToString("C"))
             .Replace("{{NetSalary}}", netPay.ToString("C"))
-            .Replace("{{GrossRate}}", emp.GrossRate.ToString("C"))
+            .Replace("{{GrossRate}}", grossRate.ToString("C"))
             .Replace("{{DeductionAmount}}", emp.DeductionAmount.ToString("C"))
             .Replace("{{NetPayInWords}}", $"Rs. {netPayInWords} through Bank for {DateTime.Now:MMMM yyyy}.")
-            .Replace("{{OpeningPL}}", emp.OpeningPL.ToString())
-            .Replace("{{PLEarn}}", emp.PLEarn.ToString())
+            .Replace("{{OpeningPL}}", emp.OpeningPL.ToString("F2"))
+            .Replace("{{PLEarn}}", emp.PLEarn.ToString("F2"))
             .Replace("{{PLAvail}}", emp.PLAvail.ToString())
-            .Replace("{{PLClosing}}", emp.PLClosing.ToString())
+            .Replace("{{PLClosing}}", emp.PLClosing.ToString("F2"))
             .Replace("{{SalaryPeriod}}", salaryPeriod)
             .Replace("{{LeaveTaken}}", emp.PLAvail.ToString())
             .Replace("{{BankName}}", emp.BankName)
@@ -217,8 +235,8 @@ public class PayslipWorker : BackgroundService
             .Replace("{{Email}}", emp.Email)
             .Replace("{{Date}}", DateTime.Now.ToString("dd-MMM-yyyy"))
             .Replace("{{Place}}", "Udaipur");
-
     }
+
 
     private void MergePdfs(List<string> files, string outputFile)
     {
@@ -270,7 +288,21 @@ public class PayslipWorker : BackgroundService
         }
     }
 
+    public async Task SendPayslipsManuallyAsync()
+    {
+        string mergedFile = Path.Combine("Payslips", DateTime.Now.ToString("yyyy-MM"),
+                                         $"Payslips_Merged_{DateTime.Now:yyyyMMdd}.pdf");
 
+        if (File.Exists(mergedFile))
+        {
+            await SendMergedEmailToHRAsync(mergedFile);
+            _logger.LogInformation("Merged payslip email sent successfully: {file}", mergedFile);
+        }
+        else
+        {
+            _logger.LogWarning("No merged payslip file found: {file}", mergedFile);
+        }
+    }
     private async Task SendMergedEmailToHRAsync(string mergedFile)
     {
         var smtpSection = _configuration.GetSection("Email");
@@ -295,7 +327,7 @@ public class PayslipWorker : BackgroundService
 
         mail.To.Add("blalbohra@gmail.com");
         mail.CC.Add("aks.bispl@gmail.com");
-        mail.CC.Add("blalbohra@gmail.com");
+        //mail.CC.Add("blalbohra@gmail.com");
 
         if (!string.IsNullOrEmpty(mergedFile) && File.Exists(mergedFile))
         {
@@ -318,7 +350,51 @@ public class PayslipWorker : BackgroundService
             throw;
         }
     }
+//    public async Task SendCompressedEmailAsync(string originalFilePath, string recipientEmail)
+//{
+//    // Step 1: Compress PDF
+//    string compressedFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath),
+//        Path.GetFileNameWithoutExtension(originalFilePath) + "_Compressed.pdf");
 
+//    using (var reader = new PdfReader(originalFilePath))
+//    {
+//        using (var fs = new FileStream(compressedFilePath, FileMode.Create, FileAccess.Write))
+//        {
+//            using (var stamper = new PdfStamper(reader, fs, PdfWriter.VERSION_1_5))
+//            {
+//                stamper.Writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
+//                for (int i = 1; i <= reader.NumberOfPages; i++)
+//                {
+//                    var page = stamper.GetUnderContent(i);
+//                }
+//            }
+//        }
+//    }
+
+//    // Check new size
+//    FileInfo fi = new FileInfo(compressedFilePath);
+//    double sizeMB = fi.Length / 1024.0 / 1024.0;
+//    Console.WriteLine($"Compressed PDF size: {sizeMB:F2} MB");
+
+//    // Step 2: Send email
+//    MailMessage mail = new MailMessage();
+//    mail.From = new MailAddress("you@example.com");
+//    mail.To.Add(recipientEmail);
+//    mail.Subject = "Payslip";
+//    mail.Body = "Please find your compressed payslip attached.";
+
+//    mail.Attachments.Add(new Attachment(compressedFilePath));
+
+//    using (SmtpClient smtp = new SmtpClient("smtp.example.com", 587))
+//    {
+//        smtp.Credentials = new System.Net.NetworkCredential("you@example.com", "password");
+//        smtp.EnableSsl = true;
+
+//        await smtp.SendMailAsync(mail);
+//    }
+
+//    Console.WriteLine("Email sent successfully!");
+//}
 
 
     private void GeneratePayslipAndSendEmail(IEnumerable<PayslipDto> empHeads)

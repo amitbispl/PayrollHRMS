@@ -15,6 +15,7 @@
           "Microsoft.Extensions.Hosting": "9.0.9",
           "Microsoft.Extensions.Hosting.WindowsServices": "9.0.9",
           "QuestPDF": "2025.7.1",
+          "iTextSharp": "5.5.13.4",
           "itext7": "9.3.0",
           "itext7.bouncy-castle-adapter": "9.3.0"
         },
@@ -180,6 +181,17 @@
       "itext7.bouncy-castle-adapter/9.3.0": {
         "dependencies": {
           "itext.bouncy-castle-adapter": "9.3.0"
+        }
+      },
+      "iTextSharp/5.5.13.4": {
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.6.2"
+        },
+        "runtime": {
+          "lib/net461/itextsharp.dll": {
+            "assemblyVersion": "5.5.13.4",
+            "fileVersion": "5.5.13.4"
+          }
         }
       },
       "MailKit/4.13.0": {
@@ -2013,6 +2025,13 @@
       "sha512": "sha512-B8I9+xX+96T1+CTKeXq0UlWSMQcGigUkzqaQSXJT6RmfkK1zTVxDJDw5RdmwziY4xdPWZspnC+IHWICBJUfvyQ==",
       "path": "itext7.bouncy-castle-adapter/9.3.0",
       "hashPath": "itext7.bouncy-castle-adapter.9.3.0.nupkg.sha512"
+    },
+    "iTextSharp/5.5.13.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/cvCNv8AJ+XuD99u4NfHSSxkBJKTdvP36wcfQF9V1Cjzi1ycyFSa4vJ64a3DhFVUTKVO60WF8OmAqngQDTHgYA==",
+      "path": "itextsharp/5.5.13.4",
+      "hashPath": "itextsharp.5.5.13.4.nupkg.sha512"
     },
     "MailKit/4.13.0": {
       "type": "package",
