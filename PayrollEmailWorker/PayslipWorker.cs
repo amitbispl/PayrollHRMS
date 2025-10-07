@@ -49,7 +49,7 @@ public class PayslipWorker : BackgroundService
                 continue;
             }
 
-            var employeeGroups = employees.GroupBy(e => e.EmpCode).ToList();
+            var employeeGroups = employees.GroupBy(e => e.EmpCode).OrderBy(g => g.Key).ToList();
 
 
             string folderPath = Path.Combine("Payslips", DateTime.Now.ToString("yyyy-MM"));
@@ -61,46 +61,82 @@ public class PayslipWorker : BackgroundService
             var tempFiles = new List<string>();
 
             // Generate PDFs in parallel
-            await Parallel.ForEachAsync(employeeGroups, new ParallelOptions
+            //await Parallel.ForEachAsync(employeeGroups, new ParallelOptions
+            //{
+            //    MaxDegreeOfParallelism = Environment.ProcessorCount,
+            //    CancellationToken = stoppingToken
+            //}, async (empGroup, ct) =>
+            //{
+            //    try
+            //    {
+            //        var emp = empGroup.First();
+            //        string filePath = Path.Combine(folderPath, $"Payslip_{emp.EmpCode}_{DateTime.Now:yyyyMMdd}.pdf");
+
+            //        string html = BuildPayslipHtml(empGroup, htmlTemplate);
+
+            //        var doc = new HtmlToPdfDocument()
+            //        {
+            //            GlobalSettings = new GlobalSettings
+            //            {
+            //                ColorMode = ColorMode.Color,
+            //                Orientation = Orientation.Portrait,
+            //                PaperSize = PaperKind.A4,
+            //                Out = filePath
+            //            },
+            //            Objects = { new ObjectSettings { HtmlContent = html, WebSettings = { DefaultEncoding = "utf-8" } } }
+            //        };
+
+            //        _converter.Convert(doc);
+
+            //        lock (tempFiles) tempFiles.Add(filePath);
+
+            //        _logger.LogInformation("Payslip generated: {filePath}", filePath);
+
+            //        // Send individual email to employee
+            //        //await SendEmailWithAttachmentAsync(emp, filePath);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        _logger.LogError(ex, "Error generating payslip for EmployeeCode: {EmpCode}", empGroup.Key);
+            //    }
+            //});
+
+            //if (tempFiles.Any())
+            //{
+            //    string mergedFile = Path.Combine(folderPath, $"Payslips_Merged_{DateTime.Now:yyyyMMdd}.pdf");
+            //    MergePdfs(tempFiles, mergedFile);
+
+            //    _logger.LogInformation("Merged PDF created: {mergedFile}", mergedFile);
+
+            //    //await SendMergedEmailToHRAsync(mergedFile);
+            //}
+            foreach (var empGroup in employees.GroupBy(e => e.EmpCode).OrderBy(g => g.Key))
             {
-                MaxDegreeOfParallelism = Environment.ProcessorCount,
-                CancellationToken = stoppingToken
-            }, async (empGroup, ct) =>
-            {
-                try
+                var emp = empGroup.First();
+                string filePath = Path.Combine(folderPath, $"Payslip_{emp.EmpCode}_{DateTime.Now:yyyyMMdd}.pdf");
+
+                string html = BuildPayslipHtml(empGroup, htmlTemplate);
+
+                var doc = new HtmlToPdfDocument
                 {
-                    var emp = empGroup.First();
-                    string filePath = Path.Combine(folderPath, $"Payslip_{emp.EmpCode}_{DateTime.Now:yyyyMMdd}.pdf");
-
-                    string html = BuildPayslipHtml(empGroup, htmlTemplate);
-
-                    var doc = new HtmlToPdfDocument()
+                    GlobalSettings = new GlobalSettings
                     {
-                        GlobalSettings = new GlobalSettings
-                        {
-                            ColorMode = ColorMode.Color,
-                            Orientation = Orientation.Portrait,
-                            PaperSize = PaperKind.A4,
-                            Out = filePath
-                        },
-                        Objects = { new ObjectSettings { HtmlContent = html, WebSettings = { DefaultEncoding = "utf-8" } } }
-                    };
+                        ColorMode = ColorMode.Color,
+                        Orientation = Orientation.Portrait,
+                        PaperSize = PaperKind.A4,
+                        Out = filePath
+                    },
+                    Objects = { new ObjectSettings { HtmlContent = html, WebSettings = { DefaultEncoding = "utf-8" } } }
+                };
 
-                    _converter.Convert(doc);
+                _converter.Convert(doc);
 
-                    lock (tempFiles) tempFiles.Add(filePath);
+                tempFiles.Add(filePath);
 
-                    _logger.LogInformation("Payslip generated: {filePath}", filePath);
-
-                    // Send individual email to employee
-                    //await SendEmailWithAttachmentAsync(emp, filePath);
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error generating payslip for EmployeeCode: {EmpCode}", empGroup.Key);
-                }
-            });
-
+                _logger.LogInformation("Payslip generated: {filePath}", filePath);
+                //        // Send individual email to employee
+                //        //await SendEmailWithAttachmentAsync(emp, filePath);
+            }
             if (tempFiles.Any())
             {
                 string mergedFile = Path.Combine(folderPath, $"Payslips_Merged_{DateTime.Now:yyyyMMdd}.pdf");
@@ -110,6 +146,7 @@ public class PayslipWorker : BackgroundService
 
                 //await SendMergedEmailToHRAsync(mergedFile);
             }
+
 
             _logger.LogInformation("Payslip generation completed at: {time}", DateTimeOffset.Now);
 
@@ -140,10 +177,14 @@ public class PayslipWorker : BackgroundService
         decimal grossRate = basic + hra + flexiPay;
 
         // Other Deduction Total
-        decimal otherDeductionTotal = empHeads.FirstOrDefault(x => x.OtherDeductionTotal.HasValue)?.OtherDeductionTotal ?? 0;
+        decimal otherDeductionTotal = empHeads
+        .Where(x => x.OtherDeductionTotal.HasValue && x.OtherDeductionTotal.Value > 0)
+        .Select(x => x.OtherDeductionTotal.Value)
+        .FirstOrDefault();
 
         decimal totalEarning = earnings.Sum(x => x.Amount);
         decimal totalDeduction = deductions.Sum(x => x.Amount);
+        totalDeduction = totalDeduction + otherDeductionTotal;
         decimal netPay = totalEarning - totalDeduction;
 
         string netPayInWords = Helper.NumberToWords(netPay);
@@ -175,15 +216,20 @@ public class PayslipWorker : BackgroundService
 </tr>");
         }
 
-        // Other Deduction Total row
+        // ✅ Add OtherDeductionTotal row after ALL deductions are printed
         if (otherDeductionTotal > 0)
         {
             salaryRows.AppendLine($@"
 <tr>
-    <th colspan='5' class='right'>Other Deductions Total</th>
-    <td>{otherDeductionTotal:C}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><b>Notice Deductions</b></td>
+    <td style='text-align:right'><b>{otherDeductionTotal:C}</b></td>
 </tr>");
         }
+
+
 
         // Totals
         salaryRows.AppendLine($@"
@@ -198,7 +244,7 @@ public class PayslipWorker : BackgroundService
     <td colspan=""5"">Net Amount Payable Rs. {netPay:C} /=</td>
 </tr>
 <tr>
-    <td colspan=""5"">(Rs. {netPayInWords} through Bank for the month {DateTime.Now:MMMM yyyy}.)</td>
+    <td colspan=""5"">(Rs. {netPayInWords} through Bank for the month {previousMonth:MMMM yyyy}.)</td>
 </tr>");
 
         // Replace placeholders in HTML template
@@ -315,7 +361,7 @@ public class PayslipWorker : BackgroundService
             UseDefaultCredentials = false
         };
         var previousMonth = DateTime.Now.AddMonths(-1);
-        
+
         using var mail = new MailMessage
         {
 
@@ -350,51 +396,51 @@ public class PayslipWorker : BackgroundService
             throw;
         }
     }
-//    public async Task SendCompressedEmailAsync(string originalFilePath, string recipientEmail)
-//{
-//    // Step 1: Compress PDF
-//    string compressedFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath),
-//        Path.GetFileNameWithoutExtension(originalFilePath) + "_Compressed.pdf");
+    //    public async Task SendCompressedEmailAsync(string originalFilePath, string recipientEmail)
+    //{
+    //    // Step 1: Compress PDF
+    //    string compressedFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath),
+    //        Path.GetFileNameWithoutExtension(originalFilePath) + "_Compressed.pdf");
 
-//    using (var reader = new PdfReader(originalFilePath))
-//    {
-//        using (var fs = new FileStream(compressedFilePath, FileMode.Create, FileAccess.Write))
-//        {
-//            using (var stamper = new PdfStamper(reader, fs, PdfWriter.VERSION_1_5))
-//            {
-//                stamper.Writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
-//                for (int i = 1; i <= reader.NumberOfPages; i++)
-//                {
-//                    var page = stamper.GetUnderContent(i);
-//                }
-//            }
-//        }
-//    }
+    //    using (var reader = new PdfReader(originalFilePath))
+    //    {
+    //        using (var fs = new FileStream(compressedFilePath, FileMode.Create, FileAccess.Write))
+    //        {
+    //            using (var stamper = new PdfStamper(reader, fs, PdfWriter.VERSION_1_5))
+    //            {
+    //                stamper.Writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
+    //                for (int i = 1; i <= reader.NumberOfPages; i++)
+    //                {
+    //                    var page = stamper.GetUnderContent(i);
+    //                }
+    //            }
+    //        }
+    //    }
 
-//    // Check new size
-//    FileInfo fi = new FileInfo(compressedFilePath);
-//    double sizeMB = fi.Length / 1024.0 / 1024.0;
-//    Console.WriteLine($"Compressed PDF size: {sizeMB:F2} MB");
+    //    // Check new size
+    //    FileInfo fi = new FileInfo(compressedFilePath);
+    //    double sizeMB = fi.Length / 1024.0 / 1024.0;
+    //    Console.WriteLine($"Compressed PDF size: {sizeMB:F2} MB");
 
-//    // Step 2: Send email
-//    MailMessage mail = new MailMessage();
-//    mail.From = new MailAddress("you@example.com");
-//    mail.To.Add(recipientEmail);
-//    mail.Subject = "Payslip";
-//    mail.Body = "Please find your compressed payslip attached.";
+    //    // Step 2: Send email
+    //    MailMessage mail = new MailMessage();
+    //    mail.From = new MailAddress("you@example.com");
+    //    mail.To.Add(recipientEmail);
+    //    mail.Subject = "Payslip";
+    //    mail.Body = "Please find your compressed payslip attached.";
 
-//    mail.Attachments.Add(new Attachment(compressedFilePath));
+    //    mail.Attachments.Add(new Attachment(compressedFilePath));
 
-//    using (SmtpClient smtp = new SmtpClient("smtp.example.com", 587))
-//    {
-//        smtp.Credentials = new System.Net.NetworkCredential("you@example.com", "password");
-//        smtp.EnableSsl = true;
+    //    using (SmtpClient smtp = new SmtpClient("smtp.example.com", 587))
+    //    {
+    //        smtp.Credentials = new System.Net.NetworkCredential("you@example.com", "password");
+    //        smtp.EnableSsl = true;
 
-//        await smtp.SendMailAsync(mail);
-//    }
+    //        await smtp.SendMailAsync(mail);
+    //    }
 
-//    Console.WriteLine("Email sent successfully!");
-//}
+    //    Console.WriteLine("Email sent successfully!");
+    //}
 
 
     private void GeneratePayslipAndSendEmail(IEnumerable<PayslipDto> empHeads)
@@ -489,7 +535,7 @@ public class PayslipWorker : BackgroundService
         _logger.LogInformation("Payslip generated: {filePath}", filePath);
 
         // Send email with PDF
-       // SendEmailWithAttachment(emp, filePath);
+        // SendEmailWithAttachment(emp, filePath);
     }
     private async Task GenerateAndMergePayslipsAsync(IEnumerable<IGrouping<string, PayslipDto>> employeeGroups, string htmlTemplate, string folderPath)
     {
@@ -544,8 +590,8 @@ public class PayslipWorker : BackgroundService
             File.Delete(f);
     }
 
-    
-    
+
+
 
 
     private void SendEmailWithAttachment(PayslipDto emp, string filePath)

@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:payslipworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\html\\payslip-template1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:html\\payslip-template1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\models\\payslipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:models\\payslipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\html\\payslip-template1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:html\\payslip-template1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +62,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-07T01:38:46.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "helper.cs",
               "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\helper\\helper.cs",
               "RelativeDocumentMoniker": "helper\\helper.cs",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "PayslipDto.cs",
               "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\Models\\PayslipDto.cs",
               "RelativeDocumentMoniker": "Models\\PayslipDto.cs",
@@ -84,13 +101,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "payslip-template1.html",
               "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\HTML\\payslip-template1.html",
               "RelativeDocumentMoniker": "HTML\\payslip-template1.html",
               "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\HTML\\payslip-template1.html",
               "RelativeToolTip": "HTML\\payslip-template1.html",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAAAMBAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAABsBAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-10-05T06:22:20.271Z",
               "EditorCaption": ""
@@ -103,7 +120,7 @@
               "RelativeDocumentMoniker": "PayslipWorker.cs",
               "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\PayslipWorker.cs",
               "RelativeToolTip": "PayslipWorker.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAAAJUAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAANEAAAAAAAAAAAAqwNoAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-05T05:55:24.781Z",
               "EditorCaption": ""
