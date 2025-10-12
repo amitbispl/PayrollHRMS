@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\payslipworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:payslipworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|..\\HRMS.Infrastructure\\HRMS.Infrastructure.csproj|d:\\amit\\repositories\\payrollhrms\\hrms.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\html\\payslip-template1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:html\\payslip-template1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|..\\HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\payrollhrms\\hrms.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|..\\HRMS.Domain\\HRMS.Domain.csproj|d:\\amit\\repositories\\payrollhrms\\hrms.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:helper\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\controllers\\homecontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\models\\payslipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|PayrollEmailWorker.csproj|solutionrelative:models\\payslipdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|HRMS.Service.csproj|d:\\amit\\repositories\\payrollhrms\\payrollemailworker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3546111-1B3B-44C0-9C68-ABAB5C178CFB}|HRMS.Service.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FB811C-8821-40B6-9220-627460243D78}|..\\PayRoll.App\\HRMS.Web.csproj|d:\\amit\\repositories\\payrollhrms\\payroll.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,68 +82,160 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-07T01:38:46.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "helper.cs",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\helper\\helper.cs",
-              "RelativeDocumentMoniker": "helper\\helper.cs",
-              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\helper\\helper.cs",
-              "RelativeToolTip": "helper\\helper.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAiwC0AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\HRMS.Infrastructure\\Class1.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "..\\HRMS.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T05:42:00.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PayslipDto.cs",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\Models\\PayslipDto.cs",
-              "RelativeDocumentMoniker": "Models\\PayslipDto.cs",
-              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\Models\\PayslipDto.cs",
-              "RelativeToolTip": "Models\\PayslipDto.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwC4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T05:26:39.806Z",
+              "WhenOpened": "2025-10-12T04:09:30.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "payslip-template1.html",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\HTML\\payslip-template1.html",
-              "RelativeDocumentMoniker": "HTML\\payslip-template1.html",
-              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\HTML\\payslip-template1.html",
-              "RelativeToolTip": "HTML\\payslip-template1.html",
-              "ViewState": "AgIAAAsBAAAAAAAAAAAAABsBAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-05T06:22:20.271Z",
-              "EditorCaption": ""
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\HRMS.Application\\Class1.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.Application\\Class1.cs",
+              "RelativeToolTip": "..\\HRMS.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T04:08:56.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PayslipWorker.cs",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\PayslipWorker.cs",
-              "RelativeDocumentMoniker": "PayslipWorker.cs",
-              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\PayslipWorker.cs",
-              "RelativeToolTip": "PayslipWorker.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAqwNoAAABJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\HRMS.Domain\\Class1.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.Domain\\Class1.cs",
+              "RelativeToolTip": "..\\HRMS.Domain\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T05:55:24.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-12T04:07:28.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController1.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Controllers\\HomeController1.cs",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\Controllers\\HomeController1.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Controllers\\HomeController1.cs",
+              "RelativeToolTip": "..\\PayRoll.App\\Controllers\\HomeController1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T16:00:28.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "..\\PayRoll.App\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-11T15:58:36.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\PayRoll.App\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-11T15:55:59.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "login.html",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
+              "RelativeToolTip": "..\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-11T15:52:01.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\PayRoll.App\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-11T15:51:04.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\PayRoll.App\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:50:55.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
+              "RelativeToolTip": "..\\PayRoll.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-11T15:47:35.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\appsettings.json",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\appsettings.json",
+              "RelativeToolTip": "..\\PayRoll.App\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-11T15:36:27.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayrollEmailWorker\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-11T15:36:19.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Program.cs",
+              "RelativeDocumentMoniker": "..\\PayRoll.App\\Program.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\PayrollHRMS\\PayRoll.App\\Program.cs",
+              "RelativeToolTip": "..\\PayRoll.App\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T15:36:11.955Z"
             }
           ]
         }
