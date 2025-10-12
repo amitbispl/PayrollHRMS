@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.API\\HRMS.API.csproj": {}
+    "D:\\Amit\\Repositories\\HRMS\\HRMS.API\\HRMS.API.csproj": {}
   },
   "projects": {
-    "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.API\\HRMS.API.csproj": {
+    "D:\\Amit\\Repositories\\HRMS\\HRMS.API\\HRMS.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.API\\HRMS.API.csproj",
+        "projectUniqueName": "D:\\Amit\\Repositories\\HRMS\\HRMS.API\\HRMS.API.csproj",
         "projectName": "HRMS.API",
-        "projectPath": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.API\\HRMS.API.csproj",
+        "projectPath": "D:\\Amit\\Repositories\\HRMS\\HRMS.API\\HRMS.API.csproj",
         "packagesPath": "C:\\Users\\ftvr4\\.nuget\\packages\\",
-        "outputPath": "D:\\Amit\\Repositories\\PayrollHRMS\\HRMS.API\\obj\\",
+        "outputPath": "D:\\Amit\\Repositories\\HRMS\\HRMS.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
