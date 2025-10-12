@@ -17,6 +17,7 @@ D:\Amit\Repositories\PayrollHRMS\HRMS.Infrastructure\bin\Debug\net8.0\HRMS.Domai
 D:\Amit\Repositories\PayrollHRMS\HRMS.Infrastructure\obj\Debug\net8.0\HRMS.Infrastructure.csproj.AssemblyReference.cache
 D:\Amit\Repositories\PayrollHRMS\HRMS.Infrastructure\obj\Debug\net8.0\HRMS.Inf.BA81F186.Up2Date
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\bin\Debug\net8.0\HRMS.Infrastructure.deps.json
+D:\Amit\Repositories\HRMS\HRMS.Infrastructure\bin\Debug\net8.0\HRMS.Infrastructure.runtimeconfig.json
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\bin\Debug\net8.0\HRMS.Infrastructure.dll
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\bin\Debug\net8.0\HRMS.Infrastructure.pdb
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\bin\Debug\net8.0\HRMS.Application.dll
@@ -33,4 +34,5 @@ D:\Amit\Repositories\HRMS\HRMS.Infrastructure\obj\Debug\net8.0\HRMS.Inf.BA81F186
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\obj\Debug\net8.0\HRMS.Infrastructure.dll
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\obj\Debug\net8.0\refint\HRMS.Infrastructure.dll
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\obj\Debug\net8.0\HRMS.Infrastructure.pdb
+D:\Amit\Repositories\HRMS\HRMS.Infrastructure\obj\Debug\net8.0\HRMS.Infrastructure.genruntimeconfig.cache
 D:\Amit\Repositories\HRMS\HRMS.Infrastructure\obj\Debug\net8.0\ref\HRMS.Infrastructure.dll
