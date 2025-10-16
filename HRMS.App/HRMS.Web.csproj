@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Dashboard\Dashboard.cshtml" />
     <Content Remove="wwwroot\assets\css\portal.css" />
     <Content Remove="wwwroot\assets\images\app-logo.svg" />
     <Content Remove="wwwroot\assets\images\background\background-1.jpg" />
@@ -4659,7 +4660,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HRMS.Application\HRMS.Application.csproj" />
+    <ProjectReference Include="..\HRMS.Infrastructure\HRMS.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

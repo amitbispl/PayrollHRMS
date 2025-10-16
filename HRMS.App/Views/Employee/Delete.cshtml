@@ -1,0 +1,11 @@
+﻿@model HRMS.Application.DTOs.EmployeeDto
+
+<h2>Confirm Delete</h2>
+
+<p>Are you sure you want to delete employee <strong>@Model.EmpName</strong>?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="EmployeeId" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

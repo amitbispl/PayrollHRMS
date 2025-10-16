@@ -2,12 +2,21 @@
 {
     public class EmployeeDto
     {
-        public int Id { get; set; }
-        public string FullName { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string Phone { get; set; } = string.Empty;
-        public string DepartmentName { get; set; } = string.Empty;
-        public DateTime DateOfJoining { get; set; }
-        public decimal Salary { get; set; }
+        public int EmployeeId { get; set; }
+        public int CompanyId { get; set; }
+        public string? Email { get; set; }
+        public string? Phone { get; set; }
+        public DateTime? DateOfJoining { get; set; }
+        public decimal BasicSalary { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public string? EmpCode { get; set; }
+        public string? EmpName { get; set; }
+        public string? UAN { get; set; }
+        public string? ESIC { get; set; }
+        public int? DeptId { get; set; }
+        public int? DesignationId { get; set; }
+        public decimal HRA { get; set; }
+        public decimal FlexiPay { get; set; }
     }
 }

@@ -23,8 +23,7 @@ namespace HRMS.Infrastructure.Repositories
         public async Task<Employee?> GetByIdAsync(int id)
         {
             return await _context.Employees
-                .Include(e => e.Department)
-                .FirstOrDefaultAsync(e => e.Id == id);
+                .FirstOrDefaultAsync(e => e.EmployeeId == id);
         }
 
         public async Task<Employee> AddAsync(Employee employee)

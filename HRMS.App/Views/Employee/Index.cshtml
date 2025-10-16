@@ -1,0 +1,37 @@
+﻿@model List<HRMS.Application.DTOs.EmployeeDto>
+
+<h2>Employees</h2>
+<a asp-action="Create" class="btn btn-primary mb-2">Add Employee</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Emp Code</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Basic Salary</th>
+            <th>HRA</th>
+            <th>Active</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EmpCode</td>
+                <td>@emp.EmpName</td>
+                <td>@emp.Email</td>
+                <td>@emp.Phone</td>
+                <td>@emp.BasicSalary</td>
+                <td>@emp.HRA</td>
+                <td>@emp.IsActive</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@emp.EmployeeId">Edit</a> |
+                   @*  <a asp-action="Delete" asp-route-id="@emp.EmployeeId" class="text-danger">Delete</a> *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,85 @@
+﻿@model HRMS.Application.DTOs.EmployeeDto
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<h2>Add Employee</h2>
+<hr />
+
+<form asp-action="Create" method="post" class="row g-3">
+
+    <div class="col-md-3">
+        <label asp-for="EmpCode" class="form-label">Emp Code</label>
+        <input asp-for="EmpCode" class="form-control" />
+    </div>
+
+    <div class="col-md-5">
+        <label asp-for="EmpName" class="form-label">Full Name</label>
+        <input asp-for="EmpName" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="CompanyId" class="form-label">Company</label>
+        <input asp-for="CompanyId" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <div class="col-md-4">
+        <label asp-for="DateOfJoining" class="form-label">Date of Joining</label>
+        <input asp-for="DateOfJoining" type="date" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="DeptId" class="form-label">Department</label>
+        <input asp-for="DeptId" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="DesignationId" class="form-label">Designation</label>
+        <input asp-for="DesignationId" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="UAN" class="form-label"></label>
+        <input asp-for="UAN" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="ESIC" class="form-label">ESI No</label>
+        <input asp-for="ESIC" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="BasicSalary" class="form-label"></label>
+        <input asp-for="BasicSalary" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="HRA" class="form-label"></label>
+        <input asp-for="HRA" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="FlexiPay" class="form-label"></label>
+        <input asp-for="FlexiPay" class="form-control" />
+    </div>
+
+    <div class="col-md-3 form-check mt-4">
+        <input asp-for="IsActive" class="form-check-input" />
+        <label asp-for="IsActive" class="form-check-label">Active</label>
+    </div>
+
+    <div class="col-12 mt-3">
+        <button type="submit" class="btn btn-success">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

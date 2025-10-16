@@ -8,12 +8,8 @@ namespace HRMS.Application.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<Employee, EmployeeDto>()
-                .ForMember(dest => dest.DepartmentName, opt => opt.MapFrom(src => src.Department!.Name))
-                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))
-                .ReverseMap();
-
-            CreateMap<Department, DepartmentDto>().ReverseMap();
+            CreateMap<User, UserDto>();
+            CreateMap<Employee, EmployeeDto>();
         }
     }
 }

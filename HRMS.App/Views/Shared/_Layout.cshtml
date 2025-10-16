@@ -1,49 +1,96 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    Layout = null;
+
+    // Get JWT token from session
+    var token = HttpContextAccessor.HttpContext?.Session.GetString("JWToken");
+
+    // Extract email from token if exists
+    string userEmail = "Guest";
+    if (!string.IsNullOrEmpty(token))
+    {
+        var handler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+        var jwtToken = handler.ReadJwtToken(token);
+        var emailClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email);
+        if (emailClaim != null)
+            userEmail = emailClaim.Value;
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PayRoll.App</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/PayRoll.App.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Portal</title>
+
+    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
+
+    <!-- Portal CSS -->
+    <link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PayRoll.App</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+<body class="app">
+    <div class="app-wrapper">
+
+        <!-- Sidebar -->
+        <div class="app-sidebar">
+            <div class="app-sidebar-header">
+                <a class="app-logo" asp-controller="Dashboard" asp-action="Index">
+                    <img class="logo-icon me-2" src="~/assets/images/a2rlogo.jpg" alt="logo">
+                    Portal
+                </a>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+            <div class="app-sidebar-menu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Employees" asp-action="Index">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Payroll" asp-action="Index">Payroll</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="app-main">
+            <header class="app-header">
+                <nav class="navbar navbar-expand navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <span class="navbar-text">Welcome, @userEmail</span>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="app-content p-4">
+                @RenderBody()
+            </div>
+
+            <footer class="app-footer border-top text-center py-3">
+                <small>
+                    &copy; 2025 Portal - Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by
+                    <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a>
+                </small>
+            </footer>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - PayRoll.App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/assets/plugins/popper.min.js"></script>
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

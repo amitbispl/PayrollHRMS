@@ -1,0 +1,86 @@
+﻿@model HRMS.Application.Features.Dashboard.Queries.DashboardStatsDto
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="min-h-screen bg-gray-100 p-6">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-6">Dashboard</h1>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+        <div class="bg-blue-600 text-white rounded-2xl shadow p-6 text-center">
+            <h2 class="text-sm uppercase opacity-80">Total Companies</h2>
+            <p class="text-3xl font-bold mt-2">@Model.TotalCompanies</p>
+        </div>
+
+        <div class="bg-green-600 text-white rounded-2xl shadow p-6 text-center">
+            <h2 class="text-sm uppercase opacity-80">Total Employees</h2>
+            <p class="text-3xl font-bold mt-2">@Model.TotalEmployees</p>
+        </div>
+
+        <div class="bg-indigo-600 text-white rounded-2xl shadow p-6 text-center">
+            <h2 class="text-sm uppercase opacity-80">Total PF</h2>
+            <p class="text-3xl font-bold mt-2">@Model.TotalPF.ToString("C")</p>
+        </div>
+
+        <div class="bg-yellow-500 text-white rounded-2xl shadow p-6 text-center">
+            <h2 class="text-sm uppercase opacity-80">Total ESI</h2>
+            <p class="text-3xl font-bold mt-2">@Model.TotalESI.ToString("C")</p>
+        </div>
+    </div>
+
+    <!-- Lower Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Active Payrolls -->
+        <div class="bg-white rounded-2xl shadow p-6 text-center">
+            <h2 class="text-lg font-semibold text-gray-700">Active Payrolls</h2>
+            <p class="text-4xl font-bold text-blue-600 mt-3">@Model.ActivePayrolls</p>
+        </div>
+
+        <!-- Monthly Trend Chart -->
+        <div class="col-span-2 bg-white rounded-2xl shadow p-6">
+            <h2 class="text-lg font-semibold text-gray-700 mb-4">Monthly PF & ESI Trends</h2>
+            <canvas id="pfEsiChart" height="100"></canvas>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('pfEsiChart');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                datasets: [{
+                    label: 'PF',
+                    data: [12000, 15000, 18000, 17000, 20000, 21000, 19000, 22000],
+                    borderColor: 'rgb(37, 99, 235)',
+                    fill: false,
+                    tension: 0.4
+                },
+                {
+                    label: 'ESI',
+                    data: [5000, 6000, 7000, 6500, 8000, 7500, 7200, 8100],
+                    borderColor: 'rgb(250, 204, 21)',
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+}

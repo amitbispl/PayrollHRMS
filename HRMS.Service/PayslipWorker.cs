@@ -396,6 +396,7 @@ public class PayslipWorker : BackgroundService
             throw;
         }
     }
+
     //    public async Task SendCompressedEmailAsync(string originalFilePath, string recipientEmail)
     //{
     //    // Step 1: Compress PDF
