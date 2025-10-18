@@ -1,0 +1,33 @@
+﻿@model List<HRMS.Application.DTOs.PayslipImportDto>
+
+<h2>Payslip Imports</h2>
+
+<form method="post" enctype="multipart/form-data" asp-action="Import">
+    <input type="file" name="file" class="form-control" required />
+    <input type="hidden" name="companyId" value="@ViewBag.CompanyId" />
+    <button type="submit" class="btn btn-primary mt-2">Import Payslips</button>
+</form>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Employee Code</th>
+            <th>Month</th>
+            <th>Basic</th>
+            <th>HRA</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeCode</td>
+                <td>@item.Month</td>
+                <td>@item.Basic</td>
+                <td>@item.HRA</td>
+                <td>@item.CreatedDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

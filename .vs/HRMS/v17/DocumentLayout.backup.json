@@ -3,48 +3,72 @@
   "WorkspaceRootPath": "D:\\Amit\\Repositories\\HRMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|HRMS.Domain\\HRMS.Domain.csproj|d:\\amit\\repositories\\hrms\\hrms.domain\\entities\\payslipimportmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|HRMS.Domain\\HRMS.Domain.csproj|solutionrelative:hrms.domain\\entities\\payslipimportmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|d:\\amit\\repositories\\hrms\\hrms.infrastructure\\repositories\\payslipimportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|solutionrelative:hrms.infrastructure\\repositories\\payslipimportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\features\\payslipimportdetails\\commands\\importpayslips\\importpayslipscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\features\\payslipimportdetails\\commands\\importpayslips\\importpayslipscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\features\\payslipimportdetails\\commands\\importpayslips\\importpayslipscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\features\\payslipimportdetails\\commands\\importpayslips\\importpayslipscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\charts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\charts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\controllers\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\controllers\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\views\\import\\importpayslip.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\views\\import\\importpayslip.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\dtos\\payslipimportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\dtos\\payslipimportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|HRMS.Domain\\HRMS.Domain.csproj|d:\\amit\\repositories\\hrms\\hrms.domain\\entities\\payslipimport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|HRMS.Domain\\HRMS.Domain.csproj|solutionrelative:hrms.domain\\entities\\payslipimport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\orders.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\orders.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\interfaces\\ipayslipimportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\interfaces\\ipayslipimportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|d:\\amit\\repositories\\hrms\\hrms.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|solutionrelative:hrms.infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|d:\\amit\\repositories\\hrms\\hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\notifications.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E6E6ED4-1994-6BFE-72A5-25321B5437FD}|HRMS.App\\HRMS.Web.csproj|solutionrelative:hrms.app\\portal-theme-bs5-master\\portal-theme-bs5-master\\notifications.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|HRMS.Domain\\HRMS.Domain.csproj|d:\\amit\\repositories\\hrms\\hrms.domain\\entities\\payrollmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A635C072-6687-4396-B0B3-981758E152F7}|HRMS.Domain\\HRMS.Domain.csproj|solutionrelative:hrms.domain\\entities\\payrollmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|d:\\amit\\repositories\\hrms\\hrms.infrastructure\\repositories\\payslipjobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|solutionrelative:hrms.infrastructure\\repositories\\payslipjobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|d:\\amit\\repositories\\hrms\\hrms.infrastructure\\infrastructureserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E516FCBD-9B86-4379-A650-39B3C07A9D14}|HRMS.Infrastructure\\HRMS.Infrastructure.csproj|solutionrelative:hrms.infrastructure\\infrastructureserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\interfaces\\ipayslipjobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\interfaces\\ipayslipjobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|d:\\amit\\repositories\\hrms\\hrms.application\\dtos\\payslipjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F555E8E-DF0C-4F62-8F7C-71964A5EB2DC}|HRMS.Application\\HRMS.Application.csproj|solutionrelative:hrms.application\\dtos\\payslipjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{347A1172-8864-CAE3-B5D4-5AAF3BB937C6}|HRMS.Service\\HRMS.Service.csproj|d:\\amit\\repositories\\hrms\\hrms.service\\payslipworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347A1172-8864-CAE3-B5D4-5AAF3BB937C6}|HRMS.Service\\HRMS.Service.csproj|solutionrelative:hrms.service\\payslipworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,144 +110,223 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "HRMS.App\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "HRMS.App\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-17T03:50:56.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "charts.html",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\charts.html",
-              "RelativeDocumentMoniker": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\charts.html",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\charts.html",
-              "RelativeToolTip": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\charts.html",
-              "ViewState": "AgIAAFYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-17T03:48:10.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "HRMS.App\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "HRMS.App\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Import.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Controllers\\Import.cs",
+              "RelativeDocumentMoniker": "HRMS.App\\Controllers\\Import.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Controllers\\Import.cs",
+              "RelativeToolTip": "HRMS.App\\Controllers\\Import.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T03:45:30.374Z",
+              "WhenOpened": "2025-10-18T04:51:04.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "HRMS.App\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "HRMS.App\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAADgvzIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T05:38:08.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "orders.html",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\orders.html",
-              "RelativeDocumentMoniker": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\orders.html",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\orders.html",
-              "RelativeToolTip": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\orders.html",
-              "ViewState": "AgIAAHIBAAAAAAAAAAAAAIUBAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-16T05:32:48.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "notifications.html",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\notifications.html",
-              "RelativeDocumentMoniker": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\notifications.html",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\notifications.html",
-              "RelativeToolTip": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\notifications.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-16T05:32:47.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Employee\\Index.cshtml",
-              "RelativeDocumentMoniker": "HRMS.App\\Views\\Employee\\Index.cshtml",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Employee\\Index.cshtml",
-              "RelativeToolTip": "HRMS.App\\Views\\Employee\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Title": "ImportPaySlip.cshtml",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Import\\ImportPaySlip.cshtml",
+              "RelativeDocumentMoniker": "HRMS.App\\Views\\Import\\ImportPaySlip.cshtml",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Import\\ImportPaySlip.cshtml",
+              "RelativeToolTip": "HRMS.App\\Views\\Import\\ImportPaySlip.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T05:31:58.371Z",
+              "WhenOpened": "2025-10-18T04:48:54.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "HRMS.App\\Views\\Auth\\Login.cshtml",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "HRMS.App\\Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T05:30:47.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "login.html",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
-              "RelativeDocumentMoniker": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
-              "RelativeToolTip": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\login.html",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-16T05:30:42.392Z",
+              "Title": "PayslipImportRepository.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\Repositories\\PayslipImportRepository.cs",
+              "RelativeDocumentMoniker": "HRMS.Infrastructure\\Repositories\\PayslipImportRepository.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\Repositories\\PayslipImportRepository.cs",
+              "RelativeToolTip": "HRMS.Infrastructure\\Repositories\\PayslipImportRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADgvxwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:23:54.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
-              "RelativeDocumentMoniker": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
-              "RelativeToolTip": "HRMS.App\\portal-theme-bs5-master\\portal-theme-bs5-master\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-16T05:30:13.875Z",
+              "Title": "ImportPayslipsCommand.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommand.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommand.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommand.cs",
+              "RelativeToolTip": "HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:20:34.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "HRMS.App\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.App\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "HRMS.App\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAALoAAAAAAAAAAAAAAMcAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-16T05:29:50.637Z",
+              "Title": "PayslipImportMaster.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Domain\\Entities\\PayslipImportMaster.cs",
+              "RelativeDocumentMoniker": "HRMS.Domain\\Entities\\PayslipImportMaster.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Domain\\Entities\\PayslipImportMaster.cs",
+              "RelativeToolTip": "HRMS.Domain\\Entities\\PayslipImportMaster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:12:43.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPayslipImportRepository.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Interfaces\\IPayslipImportRepository.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\Interfaces\\IPayslipImportRepository.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Interfaces\\IPayslipImportRepository.cs",
+              "RelativeToolTip": "HRMS.Application\\Interfaces\\IPayslipImportRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:23:17.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImportPayslipsCommandHandler.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommandHandler.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommandHandler.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommandHandler.cs",
+              "RelativeToolTip": "HRMS.Application\\Features\\PayslipImportDetails\\Commands\\ImportPayslips\\ImportPayslipsCommandHandler.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwDgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:20:50.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PayslipImportDto.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\DTOs\\PayslipImportDto.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\DTOs\\PayslipImportDto.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\DTOs\\PayslipImportDto.cs",
+              "RelativeToolTip": "HRMS.Application\\DTOs\\PayslipImportDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:29:14.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PayslipImport.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Domain\\Entities\\PayslipImport.cs",
+              "RelativeDocumentMoniker": "HRMS.Domain\\Entities\\PayslipImport.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Domain\\Entities\\PayslipImport.cs",
+              "RelativeToolTip": "HRMS.Domain\\Entities\\PayslipImport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:24:46.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "HRMS.Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "HRMS.Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAawDUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:13:22.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PayrollMaster.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Domain\\Entities\\PayrollMaster.cs",
+              "RelativeDocumentMoniker": "HRMS.Domain\\Entities\\PayrollMaster.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Domain\\Entities\\PayrollMaster.cs",
+              "RelativeToolTip": "HRMS.Domain\\Entities\\PayrollMaster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:39:09.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PayslipJobRepository.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\Repositories\\PayslipJobRepository.cs",
+              "RelativeDocumentMoniker": "HRMS.Infrastructure\\Repositories\\PayslipJobRepository.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\Repositories\\PayslipJobRepository.cs",
+              "RelativeToolTip": "HRMS.Infrastructure\\Repositories\\PayslipJobRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:17:20.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "HRMS.Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:28:56.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InfrastructureServiceRegistration.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "RelativeDocumentMoniker": "HRMS.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "RelativeToolTip": "HRMS.Infrastructure\\InfrastructureServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:26:14.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PayslipJobDto.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\DTOs\\PayslipJobDto.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\DTOs\\PayslipJobDto.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\DTOs\\PayslipJobDto.cs",
+              "RelativeToolTip": "HRMS.Application\\DTOs\\PayslipJobDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:15:21.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPayslipJobRepository.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Interfaces\\IPayslipJobRepository.cs",
+              "RelativeDocumentMoniker": "HRMS.Application\\Interfaces\\IPayslipJobRepository.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Application\\Interfaces\\IPayslipJobRepository.cs",
+              "RelativeToolTip": "HRMS.Application\\Interfaces\\IPayslipJobRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T04:14:41.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PayslipWorker.cs",
+              "DocumentMoniker": "D:\\Amit\\Repositories\\HRMS\\HRMS.Service\\PayslipWorker.cs",
+              "RelativeDocumentMoniker": "HRMS.Service\\PayslipWorker.cs",
+              "ToolTip": "D:\\Amit\\Repositories\\HRMS\\HRMS.Service\\PayslipWorker.cs",
+              "RelativeToolTip": "HRMS.Service\\PayslipWorker.cs",
+              "ViewState": "AgIAAE4CAAAAAAAAAAAmwFkCAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T03:57:35.246Z",
               "EditorCaption": ""
             }
           ]

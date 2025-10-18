@@ -280,3 +280,11 @@ D:\Amit\Repositories\HRMS\HRMS.App\obj\Release\net8.0\refint\HRMS.Web.dll
 D:\Amit\Repositories\HRMS\HRMS.App\obj\Release\net8.0\HRMS.Web.pdb
 D:\Amit\Repositories\HRMS\HRMS.App\obj\Release\net8.0\HRMS.Web.genruntimeconfig.cache
 D:\Amit\Repositories\HRMS\HRMS.App\obj\Release\net8.0\ref\HRMS.Web.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\EPPlus.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\EPPlus.Interfaces.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\System.Security.Cryptography.Xml.dll
+D:\Amit\Repositories\HRMS\HRMS.App\bin\Release\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

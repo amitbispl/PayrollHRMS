@@ -13,12 +13,18 @@
   <ItemGroup>
     <Folder Include="Behaviors\" />
     <Folder Include="Commands\NewFolder\" />
+    <Folder Include="Features\Jobs\Commands\" />
+    <Folder Include="Features\Jobs\Handlers\" />
+    <Folder Include="Features\Jobs\Queries\" />
+    <Folder Include="Features\PayslipImportDetails\NewFolder\" />
     <Folder Include="Validators\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="EPPlus" Version="8.2.1" />
     <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
   </ItemGroup>
 

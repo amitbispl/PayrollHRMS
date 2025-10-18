@@ -1,4 +1,5 @@
 ﻿using HRMS.Application.Interfaces;
+using HRMS.Application.Interfaces.Repositories;
 using HRMS.Domain.Interfaces;
 using HRMS.Infrastructure.Persistence;
 using HRMS.Infrastructure.Repositories;
@@ -19,6 +20,7 @@ namespace HRMS.Infrastructure
             // ✅ Register repositories (DI bindings)
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IPayslipImportRepository, PayslipImportRepository>();
 
             return services;
         }

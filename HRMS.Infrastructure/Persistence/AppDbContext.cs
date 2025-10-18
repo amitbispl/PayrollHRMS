@@ -19,6 +19,10 @@ namespace HRMS.Infrastructure.Persistence
         public DbSet<PFContribution> PFContributions { get; set; }
         public DbSet<ESIContribution> ESIContributions { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<PayslipImportMaster> PayslipImportMasters { get; set; }
+        public DbSet<PayslipImportDetails> PayslipImportDetails { get; set; }
+
+        public DbSet<PayslipImport> PayslipImports { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +44,14 @@ namespace HRMS.Infrastructure.Persistence
                 .HasOne(e => e.Payroll)
                 .WithOne(p => p.ESIContribution)
                 .HasForeignKey<ESIContribution>(e => e.PayrollId);
+
+            modelBuilder.Entity<PayslipImportMaster>(entity =>
+            {
+                entity.HasKey(e => e.ImportId);
+                entity.Property(e => e.FileName).HasMaxLength(200);
+                entity.Property(e => e.MonthYear).HasMaxLength(50);
+                entity.Property(e => e.Status).HasMaxLength(50);
+            });
         }
     }
 }
